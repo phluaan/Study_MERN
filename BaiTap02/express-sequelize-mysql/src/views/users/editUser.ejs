@@ -1,0 +1,18 @@
+
+<form action="/put-crud" method="POST">
+  <input type="hidden" name="id" value="<%= data.id %>">
+
+  <label>Email:</label>
+  <input type="text" name="email" value="<%= data.email %>"><br>
+
+  <label>First Name:</label>
+  <input type="text" name="firstName" value="<%= data.firstName %>"><br>
+
+  <label>Last Name:</label>
+  <input type="text" name="lastName" value="<%= data.lastName %>"><br>
+
+  <label>Address:</label>
+  <input type="text" name="address" value="<%= data.address %>"><br>
+
+  <button type="submit">Update</button>
+</form>
