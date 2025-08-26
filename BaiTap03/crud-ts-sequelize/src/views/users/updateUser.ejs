@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User</title>
+  </head>
+  <body>
+    <h1>Update User #<%= user.id %></h1>
+
+    <form method="POST" action="/users/<%= user.id %>">
+      <div>
+        <label>First name</label>
+        <input name="firstName" value="<%= user.firstName %>" required />
+      </div>
+      <div>
+        <label>Last name</label>
+        <input name="lastName" value="<%= user.lastName %>" required />
+      </div>
+      <div>
+        <label>Email</label>
+        <input name="email" type="email" value="<%= user.email %>" required />
+      </div>
+      <div>
+        <label>Address</label>
+        <input name="address" value="<%= user.address || '' %>" />
+      </div>
+      <button type="submit">Save</button>
+    </form>
+
+    <p><a href="/users">Back</a></p>
+  </body>
+</html>

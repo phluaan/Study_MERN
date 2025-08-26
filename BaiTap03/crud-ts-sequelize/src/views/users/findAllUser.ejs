@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users</title>
+  </head>
+  <body>
+    <h1>All Users</h1>
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(u => { %>
+          <tr>
+            <td><%= u.id %></td>
+            <td><%= u.firstName %></td>
+            <td><%= u.lastName %></td>
+            <td><%= u.email %></td>
+            <td><%= u.address || '' %></td>
+            <td>
+              <a href="/users/<%= u.id %>/edit">Edit</a>
+              <form method="POST" action="/users/<%= u.id %>/delete" style="display:inline">
+                <button type="submit" onclick="return confirm('Delete this user?')">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <p><a href="/">Back</a></p>
+  </body>
+</html>
