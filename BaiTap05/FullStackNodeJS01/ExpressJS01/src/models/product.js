@@ -7,6 +7,11 @@ const productSchema = new mongoose.Schema(
     category: { type: String, required: true },
     description: String,
     image: String,
+
+    discount: { type: Number, default: 0 },
+    views: { type: Number, default: 0 },
+    stock: { type: Number, default: 0 },
+    brand: { type: String },
   },
   { timestamps: true }
 );

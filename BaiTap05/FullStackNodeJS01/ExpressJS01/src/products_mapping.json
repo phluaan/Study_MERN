@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "properties": {
+      "name":        { "type": "text" },
+      "category":    { "type": "keyword" },
+      "brand":       { "type": "keyword" },
+      "price":       { "type": "float" },
+      "discount":    { "type": "integer" },
+      "views":       { "type": "integer" },
+      "stock":       { "type": "integer" },
+      "description": { "type": "text" },
+      "image":       { "type": "keyword" }
+    }
+  }
+}
