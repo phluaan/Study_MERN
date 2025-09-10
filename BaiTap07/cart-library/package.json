@@ -1,0 +1,47 @@
+{
+  "name": "cart-library-luandp",
+  "version": "1.0.0",
+  "description": "UI cart components (Button, Input, Modal, Card, CartPage, CartItem)",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "keywords": [
+    "cart",
+    "ui",
+    "react",
+    "components"
+  ],
+  "author": "Do Phu Luan",
+  "license": "ISC",
+  "dependencies": {
+    "react": ">=17",
+    "react-dom": ">=17",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@vitejs/plugin-react": "^5.0.2",
+    "rollup": "^4.50.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "vite": "^7.1.5"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  }
+}
