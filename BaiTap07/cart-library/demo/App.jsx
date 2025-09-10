@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState } from "react";
-import { CartPage, ProductListPage } from "../src";
+import { CartPage, ProductListPage } from "cart-library-luandp";
 
 function App() {
   const [items, setItems] = useState([]);

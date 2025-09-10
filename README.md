@@ -16,3 +16,4 @@
 - **Bài tập 05 (03/09/2025)**: Lazy Loading & Paging ✅
 - **Bài tập 06 (09/09/2025)**: Tìm kiếm và lọc dữ liệu ✅
 - **Bài tập 07 (10/09/2025)**: Viết thư viện (https://www.npmjs.com/package/cart-library-luandp) ✅
+  cách chạy: npm install cart-library-luandp@1.0.1

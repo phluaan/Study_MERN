@@ -1,4 +1,4 @@
-// src/index.js
+import "./styles/cart.css";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Modal from "./components/Modal";

@@ -34,7 +34,7 @@ const CartPage = ({ items = [], setItems, loading, onCheckout }) => {
       <div className="empty-cart">
         <h2>Giỏ hàng trống</h2>
         <p>Bạn chưa có sản phẩm nào trong giỏ.</p>
-        <Button variant="primary">Tiếp tục mua sắm</Button>
+        <Button variant="primary" onClick={() => window.location.reload()}>Tiếp tục mua sắm</Button>
       </div>
     );
   }
