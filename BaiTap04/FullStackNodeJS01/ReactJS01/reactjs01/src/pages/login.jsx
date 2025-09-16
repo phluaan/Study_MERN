@@ -4,7 +4,7 @@ import { Button, Divider, Input, Row, Col, notification, Form } from 'antd';
 import React, { useContext} from 'react';
 import { loginApi } from "../util/api";
 import { ArrowLeftOutlined } from "@ant-design/icons";
-
+import { getUserApi } from "../util/api";
 const LoginPage = () =>{
     const navigate = useNavigate();
     const { setAuth } = useContext(AuthContext);
@@ -14,7 +14,10 @@ const LoginPage = () =>{
         const res = await loginApi(email, password);
 
         if(res && res.EC === 0) {
-            localStorage.setItem("access_token", res.access_token);
+            localStorage.setItem("accessToken", res?.DT?.accessToken);
+
+            const userRes = await getUserApi();
+
             notification.success({
                 message: "Login user",
                 description: "Success"
@@ -22,8 +25,8 @@ const LoginPage = () =>{
             setAuth({
                 isAuthenticated: true,
                 user: {
-                    email: res?.user?.email ?? "",
-                    name: res?.user?.name ?? ""
+                    email: userRes?.email ?? "",
+                    name: userRes?.name ?? ""
                 }
             })
             navigate("/");

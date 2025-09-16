@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const esClient = require("./config/elastic");
-const Product = require("./models/Product"); // chỉnh path đúng model
+const Product = require("./models/Product");
 
 const indexProduct = async (product) => {
   await esClient.index({

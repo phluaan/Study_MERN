@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 import './App.css'
 import axios from 'axios';
-import { Header } from 'antd/es/layout/layout';
+import Header from './components/layout/header.jsx';
 import { Outlet } from 'react-router-dom';
 import HeaderComponent from './components/layout/header.jsx';
 import { AuthContext } from './components/context/auth.context.jsx';
@@ -36,9 +36,9 @@ function App() {
         left: "50%",
         transform: "translate(-50%, -50%)",
       }}>
-        <spin>
+        <Spin>
 
-        </spin>
+        </Spin>
     </div>
     :
     <>

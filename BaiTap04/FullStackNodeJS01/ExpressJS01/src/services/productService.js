@@ -1,16 +1,5 @@
 const esClient = require("../config/elastic");
 
-/**
- * API search + filter (Elasticsearch)
- * Hỗ trợ:
- * - keyword: fuzzy search
- * - category
- * - brand
- * - minPrice, maxPrice
- * - discount
- * - minViews
- * - phân trang (page, limit)
- */
 const searchProducts = async ({
   keyword,
   category,
@@ -93,9 +82,6 @@ const searchProducts = async ({
   };
 };
 
-/**
- * Đồng bộ sản phẩm vào Elasticsearch khi thêm/cập nhật MongoDB
- */
 const indexProduct = async (product) => {
   await esClient.index({
     index: "products",

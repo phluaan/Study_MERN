@@ -1,4 +1,4 @@
-import { notification, Table } from "antd";
+import { Table } from "antd";
 import { getUserApi } from "../util/api";
 import { useEffect, useState } from "react";
 
@@ -7,21 +7,14 @@ const UserPage = () => {
     useEffect(() => {
         const fetchUser = async () => {
             const res = await getUserApi();
-            if(!res?.message){
-                setDataSource(res);
-            } else {
-                notification.error({
-                    message: "Unathorized",
-                    description: res.message
-                })
-            }
+            setDataSource(res);
         }
         fetchUser();
     }, []) 
     const columns = [
         {
             title: 'Id',
-            dataIndex: 'id',
+            dataIndex: '_id',
         },
         {
             title: 'Email',
@@ -33,7 +26,7 @@ const UserPage = () => {
         },
         {
             title: 'Role',
-            dataIndex: 'Role',
+            dataIndex: 'role',
         },
     ];
     return <div style={{padding: 30}}>
